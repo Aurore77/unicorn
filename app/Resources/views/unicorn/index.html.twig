@@ -1,39 +1,56 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>unicorn list</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col m8 offset-m2">
+                <h1>Ma LicoBox</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for unicorn in unicorns %}
-            <tr>
-                <td><a href="{{ path('unicorn_show', { 'id': unicorn.id }) }}">{{ unicorn.id }}</a></td>
-                <td>{{ unicorn.name }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('unicorn_show', { 'id': unicorn.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('unicorn_edit', { 'id': unicorn.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Photo</th>
+                        <th>Nom</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    
+                    {% set images = ["http://previews.123rf.com/images/refluo/refluo1411/refluo141100024/33733092-Licorne-arc-pisser-Banque-d'images.jpg",
+                    "https://frenchemployerbranding.files.wordpress.com/2015/12/candidat-licorne.png?w=637",
+                    "http://www.stickers-folies.fr/ori-stickers-licorne-462_13741.jpg",
+                    "http://indaplay.fr/wp-content/uploads/2015/10/LICORNE-04.jpg",
+                    "https://thumbs.dreamstime.com/x/portrait-fou-de-licorne-58879822.jpg",
+                    "http://i2.cdscdn.com/pdt2/0/4/1/1/300x300/auc2009883436041/rw/stickers-licorne-ailes-mauve-ref-nw2683-20x21-cm.jpg",
+                    "https://thumbs.dreamstime.com/z/licorne-heureuse-55722456.jpg"] %}
+                    
+                    {% for unicorn in unicorns %}
+                        {% set image = random(images) %}
+                        <tr class="new">
+                            <td class="new"><img class="img_licorne" src="{{ image }}"></td>
+                            <td>{{ unicorn.name }}</td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <a href="{{ path('unicorn_show', { 'id': unicorn.id }) }}">Voir une licorne</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('unicorn_edit', { 'id': unicorn.id }) }}">Modifier la licorne</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody><
+                </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('unicorn_new') }}">Create a new entry</a>
-        </li>
-    </ul>
+                <ul>
+                    <li>
+                        <a href="{{ path('unicorn_new') }}">Attraper la licorne</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
 {% endblock %}

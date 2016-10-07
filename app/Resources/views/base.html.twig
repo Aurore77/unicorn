@@ -2,12 +2,49 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Licornes!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+        <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+
+
+        <link rel="stylesheet" href="{{ asset('bundles/unicorn/css/main.css') }}">
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Licobox</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="{{ path('unicorn_new') }}">Capture</a></li>
+                    <li><a href="{{ path('unicorn_index') }}">Voir tous mes licornes</a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+        {% block body %}
+
+
+        {% endblock %}
+
+
+        {% block javascripts %}
+
+            <script>
+                $(document).ready(function() {
+                    Materialize.updateTextFields();
+                });
+
+                $(document).ready(function() {
+                    $('select').material_select();
+                });
+            </script>
+
+        {% endblock %}
     </body>
 </html>
