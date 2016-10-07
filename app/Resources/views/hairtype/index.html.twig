@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>hairType list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for hairType in hairTypes %}
+            <tr>
+                <td><a href="{{ path('hairtype_show', { 'id': hairType.id }) }}">{{ hairType.id }}</a></td>
+                <td>{{ hairType.name }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('hairtype_show', { 'id': hairType.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

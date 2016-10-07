@@ -1,0 +1,4 @@
+services:
+#    unicorn.example:
+#        class: UnicornBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

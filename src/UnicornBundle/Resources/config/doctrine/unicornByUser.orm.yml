@@ -1,0 +1,29 @@
+UnicornBundle\Entity\unicornByUser:
+  type: entity
+  table: null
+  repositoryClass: BlogBundle\Repository\unicornByUserRepository
+  id:
+      id:
+          type: integer
+          id: true
+          generator:
+          strategy: AUTO
+  fields:
+      idUser:
+          type: integer
+          column: id_user
+      idUnicorn:
+          type: integer
+          column: id_unicorn
+      captive:
+          type: boolean
+      capturDate:
+          type: date
+          column: CapturDate
+      unicornUpdate:
+          type: boolean
+      deleteUnicorn:
+          type: date
+      deleteDate:
+          type: date
+  lifecycleCallbacks: { }

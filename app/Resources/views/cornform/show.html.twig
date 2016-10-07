@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>cornForm</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ cornForm.id }}</td>
+            </tr>
+            <tr>
+                <th>Nameform</th>
+                <td>{{ cornForm.nameForm }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('cornform_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

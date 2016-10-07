@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>temperature</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ temperature.id }}</td>
+            </tr>
+            <tr>
+                <th>Celsius</th>
+                <td>{{ temperature.celsius }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('temperature_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

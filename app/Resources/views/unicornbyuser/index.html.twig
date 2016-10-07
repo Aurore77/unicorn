@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>unicornByUser list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Iduser</th>
+                <th>Idunicorn</th>
+                <th>Captive</th>
+                <th>Capturdate</th>
+                <th>Unicornupdate</th>
+                <th>Deleteunicorn</th>
+                <th>Deletedate</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for unicornByUser in unicornByUsers %}
+            <tr>
+                <td><a href="{{ path('unicornbyuser_show', { 'id': unicornByUser.id }) }}">{{ unicornByUser.id }}</a></td>
+                <td>{{ unicornByUser.idUser }}</td>
+                <td>{{ unicornByUser.idUnicorn }}</td>
+                <td>{% if unicornByUser.captive %}Yes{% else %}No{% endif %}</td>
+                <td>{% if unicornByUser.capturDate %}{{ unicornByUser.capturDate|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if unicornByUser.unicornUpdate %}Yes{% else %}No{% endif %}</td>
+                <td>{% if unicornByUser.deleteUnicorn %}{{ unicornByUser.deleteUnicorn|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if unicornByUser.deleteDate %}{{ unicornByUser.deleteDate|date('Y-m-d') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('unicornbyuser_show', { 'id': unicornByUser.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

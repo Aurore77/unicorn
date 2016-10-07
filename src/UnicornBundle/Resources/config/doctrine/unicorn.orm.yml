@@ -1,0 +1,37 @@
+UnicornBundle\Entity\unicorn:
+    type: entity
+    table: null
+    repositoryClass: UnicornBundle\Repository\unicornRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: '50'
+            unique: true
+    manyToOne:
+        color:
+            targetEntity: UnicornBundle\Entity\color
+        furColor:
+            targetEntity: UnicornBundle\Entity\furColor
+        color:
+            targetEntity: UnicornBundle\Entity\color
+        cornColor:
+             targetEntity: UnicornBundle\Entity\cornColor
+        cornForm:
+            targetEntity: UnicornBundle\Entity\cornForm
+        furTexture:
+            targetEntity: UnicornBundle\Entity\furTexture
+        hairType:
+            targetEntity: UnicornBundle\Entity\hairType
+        hoof:
+            targetEntity: UnicornBundle\Entity\hoof
+        habitat:
+            targetEntity: UnicornBundle\Entity\habitat
+        temperature:
+            targetEntity: UnicornBundle\Entity\temperature
+    lifecycleCallbacks: {  }

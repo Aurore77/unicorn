@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>eyeColor list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Color</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for eyeColor in eyeColors %}
+            <tr>
+                <td><a href="{{ path('eyecolor_show', { 'id': eyeColor.id }) }}">{{ eyeColor.id }}</a></td>
+                <td>{{ eyeColor.color }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('eyecolor_show', { 'id': eyeColor.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

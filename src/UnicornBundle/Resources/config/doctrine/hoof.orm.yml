@@ -1,0 +1,16 @@
+UnicornBundle\Entity\hoof:
+    type: entity
+    table: null
+    repositoryClass: UnicornBundle\Repository\hoofRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        hoofType:
+            type: string
+            length: '50'
+            unique: true
+    lifecycleCallbacks: {  }

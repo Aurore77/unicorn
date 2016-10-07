@@ -1,0 +1,11 @@
+UnicornBundle\Entity\captive:
+    type: entity
+    table: null
+    repositoryClass: UnicornBundle\Repository\captiveRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }

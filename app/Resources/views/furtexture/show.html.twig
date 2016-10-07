@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>furTexture</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ furTexture.id }}</td>
+            </tr>
+            <tr>
+                <th>Texture</th>
+                <td>{{ furTexture.texture }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('furtexture_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

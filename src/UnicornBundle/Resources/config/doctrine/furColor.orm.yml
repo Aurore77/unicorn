@@ -1,0 +1,16 @@
+UnicornBundle\Entity\furColor:
+    type: entity
+    table: null
+    repositoryClass: UnicornBundle\Repository\furColorRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        color:
+            type: string
+            length: '50'
+            nullable: true
+    lifecycleCallbacks: {  }

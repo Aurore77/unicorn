@@ -1,0 +1,16 @@
+UnicornBundle\Entity\cornForm:
+    type: entity
+    table: null
+    repositoryClass: UnicornBundle\Repository\cornFormRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nameForm:
+            type: string
+            length: '50'
+            unique: true
+    lifecycleCallbacks: {  }

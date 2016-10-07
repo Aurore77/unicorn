@@ -1,0 +1,12 @@
+temperature_index:
+    path:     /
+    defaults: { _controller: "UnicornBundle:temperature:index" }
+    methods:  GET
+
+temperature_show:
+    path:     /{id}/show
+    defaults: { _controller: "UnicornBundle:temperature:show" }
+    methods:  GET
+
+
+

@@ -1,0 +1,55 @@
+unicorn_user:
+    resource: "@UnicornBundle/Resources/config/routing/user.yml"
+    prefix:   /user
+
+unicorn_homepage:
+    path:     /homepage
+    defaults: { _controller: UnicornBundle:Default:index }
+
+unicorn_unicorn:
+        resource: "@UnicornBundle/Resources/config/routing/unicorn.yml"
+        prefix:   /
+
+unicorn_unicornbyuser:
+        resource: "@UnicornBundle/Resources/config/routing/unicornbyuser.yml"
+        prefix:   /unicornbyuser
+
+unicorn_temperature:
+        resource: "@UnicornBundle/Resources/config/routing/temperature.yml"
+        prefix:   /temperature
+
+unicorn_hoof:
+        resource: "@UnicornBundle/Resources/config/routing/hoof.yml"
+        prefix:   /hoof
+
+unicorn_hairtype:
+        resource: "@UnicornBundle/Resources/config/routing/hairtype.yml"
+        prefix:   /hairtype
+
+unicorn_habitat:
+        resource: "@UnicornBundle/Resources/config/routing/habitat.yml"
+        prefix:   /habitat
+
+unicorn_furtexture:
+        resource: "@UnicornBundle/Resources/config/routing/furtexture.yml"
+        prefix:   /furtexture
+
+unicorn_furcolor:
+        resource: "@UnicornBundle/Resources/config/routing/furcolor.yml"
+        prefix:   /furcolor
+
+unicorn_eyecolor:
+        resource: "@UnicornBundle/Resources/config/routing/eyecolor.yml"
+        prefix:   /eyecolor
+
+unicorn_cornform:
+        resource: "@UnicornBundle/Resources/config/routing/cornform.yml"
+        prefix:   /cornform
+
+unicorn_corncolor:
+        resource: "@UnicornBundle/Resources/config/routing/corncolor.yml"
+        prefix:   /corncolor
+
+unicorn_color:
+        resource: "@UnicornBundle/Resources/config/routing/color.yml"
+        prefix:   /color

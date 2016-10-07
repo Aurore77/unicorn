@@ -1,0 +1,16 @@
+UnicornBundle\Entity\furTexture:
+    type: entity
+    table: null
+    repositoryClass: UnicornBundle\Repository\furTextureRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        texture:
+            type: string
+            length: '50'
+            unique: true
+    lifecycleCallbacks: {  }

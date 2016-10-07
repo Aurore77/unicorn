@@ -1,0 +1,12 @@
+hairtype_index:
+    path:     /
+    defaults: { _controller: "UnicornBundle:hairType:index" }
+    methods:  GET
+
+hairtype_show:
+    path:     /{id}/show
+    defaults: { _controller: "UnicornBundle:hairType:show" }
+    methods:  GET
+
+
+

@@ -1,0 +1,19 @@
+UnicornBundle\Entity\user:
+    type: entity
+    table: null
+    repositoryClass: UnicornBundle\Repository\userRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        user:
+            type: string
+            length: '25'
+            unique: true
+        password:
+            type: string
+            length: '10'
+    lifecycleCallbacks: {  }

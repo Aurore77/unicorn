@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>unicornByUser</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ unicornByUser.id }}</td>
+            </tr>
+            <tr>
+                <th>Iduser</th>
+                <td>{{ unicornByUser.idUser }}</td>
+            </tr>
+            <tr>
+                <th>Idunicorn</th>
+                <td>{{ unicornByUser.idUnicorn }}</td>
+            </tr>
+            <tr>
+                <th>Captive</th>
+                <td>{% if unicornByUser.captive %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Capturdate</th>
+                <td>{% if unicornByUser.capturDate %}{{ unicornByUser.capturDate|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Unicornupdate</th>
+                <td>{% if unicornByUser.unicornUpdate %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Deleteunicorn</th>
+                <td>{% if unicornByUser.deleteUnicorn %}{{ unicornByUser.deleteUnicorn|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Deletedate</th>
+                <td>{% if unicornByUser.deleteDate %}{{ unicornByUser.deleteDate|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('unicornbyuser_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

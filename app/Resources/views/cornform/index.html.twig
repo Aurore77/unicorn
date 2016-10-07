@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>cornForm list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nameform</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for cornForm in cornForms %}
+            <tr>
+                <td><a href="{{ path('cornform_show', { 'id': cornForm.id }) }}">{{ cornForm.id }}</a></td>
+                <td>{{ cornForm.nameForm }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('cornform_show', { 'id': cornForm.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

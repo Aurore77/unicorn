@@ -1,0 +1,12 @@
+furcolor_index:
+    path:     /
+    defaults: { _controller: "UnicornBundle:furColor:index" }
+    methods:  GET
+
+furcolor_show:
+    path:     /{id}/show
+    defaults: { _controller: "UnicornBundle:furColor:show" }
+    methods:  GET
+
+
+

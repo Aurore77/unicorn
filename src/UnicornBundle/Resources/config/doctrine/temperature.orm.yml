@@ -1,0 +1,15 @@
+UnicornBundle\Entity\temperature:
+    type: entity
+    table: null
+    repositoryClass: UnicornBundle\Repository\temperatureRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        celsius:
+            type: string
+            unique: true
+    lifecycleCallbacks: {  }

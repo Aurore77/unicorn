@@ -1,0 +1,12 @@
+furtexture_index:
+    path:     /
+    defaults: { _controller: "UnicornBundle:furTexture:index" }
+    methods:  GET
+
+furtexture_show:
+    path:     /{id}/show
+    defaults: { _controller: "UnicornBundle:furTexture:show" }
+    methods:  GET
+
+
+

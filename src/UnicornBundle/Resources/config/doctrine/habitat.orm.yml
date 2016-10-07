@@ -1,0 +1,16 @@
+UnicornBundle\Entity\habitat:
+    type: entity
+    table: null
+    repositoryClass: UnicornBundle\Repository\habitatRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nameHabitat:
+            type: string
+            length: '50'
+            unique: true
+    lifecycleCallbacks: {  }

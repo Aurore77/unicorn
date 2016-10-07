@@ -1,0 +1,12 @@
+color_index:
+    path:     /
+    defaults: { _controller: "UnicornBundle:color:index" }
+    methods:  GET
+
+color_show:
+    path:     /{id}/show
+    defaults: { _controller: "UnicornBundle:color:show" }
+    methods:  GET
+
+
+

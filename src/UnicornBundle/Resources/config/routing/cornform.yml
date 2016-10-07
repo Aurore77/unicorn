@@ -1,0 +1,12 @@
+cornform_index:
+    path:     /
+    defaults: { _controller: "UnicornBundle:cornForm:index" }
+    methods:  GET
+
+cornform_show:
+    path:     /{id}/show
+    defaults: { _controller: "UnicornBundle:cornForm:show" }
+    methods:  GET
+
+
+

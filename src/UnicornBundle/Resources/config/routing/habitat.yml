@@ -1,0 +1,12 @@
+habitat_index:
+    path:     /
+    defaults: { _controller: "UnicornBundle:habitat:index" }
+    methods:  GET
+
+habitat_show:
+    path:     /{id}/show
+    defaults: { _controller: "UnicornBundle:habitat:show" }
+    methods:  GET
+
+
+

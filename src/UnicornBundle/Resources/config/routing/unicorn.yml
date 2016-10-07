@@ -1,0 +1,24 @@
+unicorn_index:
+    path:     /
+    defaults: { _controller: "UnicornBundle:unicorn:index" }
+    methods:  GET
+
+unicorn_show:
+    path:     /{id}/show
+    defaults: { _controller: "UnicornBundle:unicorn:show" }
+    methods:  GET
+
+unicorn_new:
+    path:     /new
+    defaults: { _controller: "UnicornBundle:unicorn:new" }
+    methods:  [GET, POST]
+
+unicorn_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "UnicornBundle:unicorn:edit" }
+    methods:  [GET, POST]
+
+unicorn_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "UnicornBundle:unicorn:delete" }
+    methods:  DELETE

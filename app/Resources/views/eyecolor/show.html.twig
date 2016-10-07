@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>eyeColor</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ eyeColor.id }}</td>
+            </tr>
+            <tr>
+                <th>Color</th>
+                <td>{{ eyeColor.color }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('eyecolor_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

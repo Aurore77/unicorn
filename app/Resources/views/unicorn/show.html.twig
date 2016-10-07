@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>unicorn</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Name</th>
+                <th>Couleur crinière </th>
+                <th>Couleur pelage</th>
+                <th>Forme de la corne</th>
+                <th>Couleur de la corne</th>
+                <th>Texture de pelage</th>
+                <th>Type de crinière</th>
+                <th>Sabot</th>
+                <th>Habitat</th>
+                <th>T° de prise</th>
+
+            </tr>
+            <tr>
+                <td>{{ unicorn.name }}</td>
+                <td>{{ unicorn.color }}</td>
+                <td>{{ unicorn.furColor }}</td>
+                <td>{{ unicorn.cornForm }}</td>
+                <td>{{ unicorn.cornColor }}</td>
+                <td>{{ unicorn.furTexture }}</td>
+                <td>{{ unicorn.hairType }}</td>
+                <td>{{ unicorn.hoof }}</td>
+                <td>{{ unicorn.habitat }}</td>
+                <<td>{{ unicorn.temperature }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('unicorn_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('unicorn_edit', { 'id': unicorn.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

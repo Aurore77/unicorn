@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>hoof list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Hooftype</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for hoof in hoofs %}
+            <tr>
+                <td><a href="{{ path('hoof_show', { 'id': hoof.id }) }}">{{ hoof.id }}</a></td>
+                <td>{{ hoof.hoofType }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('hoof_show', { 'id': hoof.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

@@ -1,0 +1,12 @@
+hoof_index:
+    path:     /
+    defaults: { _controller: "UnicornBundle:hoof:index" }
+    methods:  GET
+
+hoof_show:
+    path:     /{id}/show
+    defaults: { _controller: "UnicornBundle:hoof:show" }
+    methods:  GET
+
+
+

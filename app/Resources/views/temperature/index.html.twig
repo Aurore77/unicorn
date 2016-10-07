@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>temperature list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Celsius</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for temperature in temperatures %}
+            <tr>
+                <td><a href="{{ path('temperature_show', { 'id': temperature.id }) }}">{{ temperature.id }}</a></td>
+                <td>{{ temperature.celsius }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('temperature_show', { 'id': temperature.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

@@ -1,0 +1,12 @@
+eyecolor_index:
+    path:     /
+    defaults: { _controller: "UnicornBundle:eyeColor:index" }
+    methods:  GET
+
+eyecolor_show:
+    path:     /{id}/show
+    defaults: { _controller: "UnicornBundle:eyeColor:show" }
+    methods:  GET
+
+
+

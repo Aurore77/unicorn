@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>unicorn list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for unicorn in unicorns %}
+            <tr>
+                <td><a href="{{ path('unicorn_show', { 'id': unicorn.id }) }}">{{ unicorn.id }}</a></td>
+                <td>{{ unicorn.name }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('unicorn_show', { 'id': unicorn.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('unicorn_edit', { 'id': unicorn.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('unicorn_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

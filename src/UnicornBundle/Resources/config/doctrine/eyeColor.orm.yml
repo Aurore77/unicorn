@@ -1,0 +1,16 @@
+UnicornBundle\Entity\eyeColor:
+    type: entity
+    table: null
+    repositoryClass: UnicornBundle\Repository\eyeColorRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        color:
+            type: string
+            length: '50'
+            nullable: true
+    lifecycleCallbacks: {  }

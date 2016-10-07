@@ -1,0 +1,12 @@
+unicornbyuser_index:
+    path:     /
+    defaults: { _controller: "UnicornBundle:unicornByUser:index" }
+    methods:  GET
+
+unicornbyuser_show:
+    path:     /{id}/show
+    defaults: { _controller: "UnicornBundle:unicornByUser:show" }
+    methods:  GET
+
+
+
